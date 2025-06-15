@@ -36,6 +36,7 @@ Combinação de IA genérica com regras manuais. Embora eficaz contra ataques ó
 **Fase 3 — O Ponto de Virada (Fine-Tuning)**  
 Fine-tuning do BERTimbau com dataset customizado elevou o _Recall_ para mais de 98%, validando a abordagem especializada.
 
+<<<<<<< HEAD
 **Fase 4 — Arquitetura AI-First**  
 Com o modelo superando as regras manuais, o sistema foi refatorado para confiar exclusivamente na IA treinada.
 
@@ -43,9 +44,21 @@ Com o modelo superando as regras manuais, o sistema foi refatorado para confiar 
 
 ## 🛠️ Tecnologias Utilizadas
 
-**Linguagem:** Python 3.9+
+# **Linguagem:** Python 3.9+
+
+Hugging Face Transformers
+
+Hugging Face Datasets
+
+Scikit-learn
+
+Pandas
+
+> > > > > > > 2e731406aea7db107acfb62ff24b041d101c3c60
 
 **Machine Learning:**
+
+<<<<<<< HEAD
 
 - PyTorch
 - Hugging Face Transformers
@@ -56,9 +69,18 @@ Com o modelo superando as regras manuais, o sistema foi refatorado para confiar 
 **Integração:**
 
 - `discord.py` (bot Discord)
-- `groq` (cliente do LLM principal)
+- # `groq` (cliente do LLM principal)
+  discord.py (bot Discord)
+
+groq (cliente do LLM principal)
+
+Controle de Versão:
+
+> > > > > > > 2e731406aea7db107acfb62ff24b041d101c3c60
 
 **Controle de Versão:**
+
+<<<<<<< HEAD
 
 - Git & GitHub
 - Git LFS (para os arquivos de modelo)
@@ -68,6 +90,14 @@ Com o modelo superando as regras manuais, o sistema foi refatorado para confiar 
 ## 📂 Estrutura do Repositório
 
 ```
+=======
+Git LFS (para os arquivos de modelo)
+
+📂 Estrutura do Repositório
+bash
+Copiar
+Editar
+>>>>>>> 2e731406aea7db107acfb62ff24b041d101c3c60
 .
 ├── ANTIGENO_DIGITAL/
 │   ├── modelo_detector_injecao_v2/     # Modelo fine-tunado (via Git LFS)
@@ -77,6 +107,7 @@ Com o modelo superando as regras manuais, o sistema foi refatorado para confiar 
     ├── discord_bot.py                  # Bot principal do Discord
     ├── antigeno_digital.py             # Módulo de análise de segurança
     └── classifier/                     # Carregamento e inferência do modelo
+<<<<<<< HEAD
 ```
 
 ---
@@ -88,10 +119,20 @@ Com o modelo superando as regras manuais, o sistema foi refatorado para confiar 
 > Este projeto utiliza Git LFS para armazenar o modelo. Certifique-se de tê-lo instalado.
 
 ```bash
+=======
+⚙️ Instalação e Execução
+1. Clone o Repositório
+Este projeto utiliza Git LFS para armazenar o modelo. Certifique-se de tê-lo instalado.
+
+bash
+Copiar
+Editar
+>>>>>>> 2e731406aea7db107acfb62ff24b041d101c3c60
 git lfs install
 git clone https://github.com/andreguiot/antigeno-digital-detector.git
 cd antigeno-digital-detector
 git lfs pull
+<<<<<<< HEAD
 ```
 
 ### 2. Crie um Ambiente Virtual
@@ -110,6 +151,25 @@ Ative o ambiente:
 Crie um arquivo `requirements.txt` com:
 
 ```
+=======
+2. Crie um Ambiente Virtual
+bash
+Copiar
+Editar
+python -m venv venv
+Ative o ambiente:
+
+Windows: venv\Scripts\activate
+
+Linux/macOS: source venv/bin/activate
+
+3. Instale as Dependências
+Crie um arquivo requirements.txt com:
+
+nginx
+Copiar
+Editar
+>>>>>>> 2e731406aea7db107acfb62ff24b041d101c3c60
 torch
 transformers
 datasets
@@ -118,6 +178,7 @@ pandas
 discord.py
 python-dotenv
 groq
+<<<<<<< HEAD
 ```
 
 Instale com:
@@ -167,4 +228,46 @@ Equipe IEEE
 
 - André Guiot – [@andreguiot](https://github.com/andreguiot)
 
-Sinta-se à vontade para explorar, contribuir ou abrir _issues_! 🧪
+# Sinta-se à vontade para explorar, contribuir ou abrir _issues_! 🧪
+
+Instale com:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt 4. Configure as Chaves de API
+Crie um arquivo .env dentro da pasta integração/:
+
+env
+Copiar
+Editar
+DISCORD_BOT_TOKEN="SEU_TOKEN_DISCORD"
+GROQ_API_KEY="SUA_CHAVE_GROQ"
+O script config.py já está pronto para ler essas variáveis.
+
+5. Execute o Bot
+   bash
+   Copiar
+   Editar
+   python integração/discord_bot.py
+   O bot entrará online no seu servidor e responderá a comandos iniciados com !antigeno.
+
+🔮 Próximos Passos
+🧩 Melhor detecção de eufemismos
+Expandir o dataset com linguagem codificada (ex: “saco de carne de 70kg”).
+
+🚫 Detecção de conteúdo ilegal
+Adicionar mais exemplos de solicitações prejudiciais explícitas.
+
+🎯 Redução de falsos positivos
+Incluir exemplos seguros com palavras sensíveis como “prompt”.
+
+👨‍💻 Autoria
+Desenvolvido por:
+Equipe IEEE
+
+André Guiot – @andreguiot
+
+Sinta-se à vontade para explorar, contribuir ou abrir issues! 🧪
+
+> > > > > > > 2e731406aea7db107acfb62ff24b041d101c3c60
