@@ -217,4 +217,5 @@ Equipe IEEE
 
 - André Guiot – [@andreguiot](https://github.com/andreguiot)
 - Matheus Dinis – [@Madinni](https://github.com/Madinni)
+- Eduarda Vergueiro – [@eduardavergueiro](https://github.com/eduardavergueiro)
 
