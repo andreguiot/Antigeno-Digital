@@ -36,7 +36,6 @@ Combinação de IA genérica com regras manuais. Embora eficaz contra ataques ó
 **Fase 3 — O Ponto de Virada (Fine-Tuning)**  
 Fine-tuning do BERTimbau com dataset customizado elevou o _Recall_ para mais de 98%, validando a abordagem especializada.
 
-<<<<<<< HEAD
 **Fase 4 — Arquitetura AI-First**  
 Com o modelo superando as regras manuais, o sistema foi refatorado para confiar exclusivamente na IA treinada.
 
@@ -169,7 +168,6 @@ pandas
 discord.py
 python-dotenv
 groq
-<<<<<<< HEAD
 ```
 
 Instale com:
@@ -218,4 +216,5 @@ O bot entrará online no seu servidor e responderá a comandos iniciados com `!a
 Equipe IEEE
 
 - André Guiot – [@andreguiot](https://github.com/andreguiot)
+- Matheus Dinis – [@Madinni](https://github.com/Madinni)
 
