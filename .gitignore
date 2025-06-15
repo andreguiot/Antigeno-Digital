@@ -1,0 +1,25 @@
+# Ficheiros de ambiente e segredos
+.env
+*.env
+
+# Pastas de cache e ficheiros compilados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Ficheiros de log e resultados de testes
+*.log
+logs/
+logs_treino_antigeno/
+resultados_detetive_completo.csv
+falsos_negativos_detectados.csv
+falsos_positivos_detectados.csv
+
+# Ficheiros de configuração de IDEs
+.vscode/
+.idea/
