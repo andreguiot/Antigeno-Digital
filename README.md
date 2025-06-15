@@ -54,11 +54,9 @@ Scikit-learn
 
 Pandas
 
-> > > > > > > 2e731406aea7db107acfb62ff24b041d101c3c60
 
 **Machine Learning:**
 
-<<<<<<< HEAD
 
 - PyTorch
 - Hugging Face Transformers
@@ -76,11 +74,9 @@ groq (cliente do LLM principal)
 
 Controle de Versão:
 
-> > > > > > > 2e731406aea7db107acfb62ff24b041d101c3c60
 
 **Controle de Versão:**
 
-<<<<<<< HEAD
 
 - Git & GitHub
 - Git LFS (para os arquivos de modelo)
@@ -97,7 +93,6 @@ Git LFS (para os arquivos de modelo)
 bash
 Copiar
 Editar
->>>>>>> 2e731406aea7db107acfb62ff24b041d101c3c60
 .
 ├── ANTIGENO_DIGITAL/
 │   ├── modelo_detector_injecao_v2/     # Modelo fine-tunado (via Git LFS)
@@ -107,7 +102,6 @@ Editar
     ├── discord_bot.py                  # Bot principal do Discord
     ├── antigeno_digital.py             # Módulo de análise de segurança
     └── classifier/                     # Carregamento e inferência do modelo
-<<<<<<< HEAD
 ```
 
 ---
@@ -127,12 +121,10 @@ Este projeto utiliza Git LFS para armazenar o modelo. Certifique-se de tê-lo in
 bash
 Copiar
 Editar
->>>>>>> 2e731406aea7db107acfb62ff24b041d101c3c60
 git lfs install
 git clone https://github.com/andreguiot/antigeno-digital-detector.git
 cd antigeno-digital-detector
 git lfs pull
-<<<<<<< HEAD
 ```
 
 ### 2. Crie um Ambiente Virtual
@@ -169,7 +161,6 @@ Crie um arquivo requirements.txt com:
 nginx
 Copiar
 Editar
->>>>>>> 2e731406aea7db107acfb62ff24b041d101c3c60
 torch
 transformers
 datasets
@@ -228,46 +219,3 @@ Equipe IEEE
 
 - André Guiot – [@andreguiot](https://github.com/andreguiot)
 
-# Sinta-se à vontade para explorar, contribuir ou abrir _issues_! 🧪
-
-Instale com:
-
-bash
-Copiar
-Editar
-pip install -r requirements.txt 4. Configure as Chaves de API
-Crie um arquivo .env dentro da pasta integração/:
-
-env
-Copiar
-Editar
-DISCORD_BOT_TOKEN="SEU_TOKEN_DISCORD"
-GROQ_API_KEY="SUA_CHAVE_GROQ"
-O script config.py já está pronto para ler essas variáveis.
-
-5. Execute o Bot
-   bash
-   Copiar
-   Editar
-   python integração/discord_bot.py
-   O bot entrará online no seu servidor e responderá a comandos iniciados com !antigeno.
-
-🔮 Próximos Passos
-🧩 Melhor detecção de eufemismos
-Expandir o dataset com linguagem codificada (ex: “saco de carne de 70kg”).
-
-🚫 Detecção de conteúdo ilegal
-Adicionar mais exemplos de solicitações prejudiciais explícitas.
-
-🎯 Redução de falsos positivos
-Incluir exemplos seguros com palavras sensíveis como “prompt”.
-
-👨‍💻 Autoria
-Desenvolvido por:
-Equipe IEEE
-
-André Guiot – @andreguiot
-
-Sinta-se à vontade para explorar, contribuir ou abrir issues! 🧪
-
-> > > > > > > 2e731406aea7db107acfb62ff24b041d101c3c60
