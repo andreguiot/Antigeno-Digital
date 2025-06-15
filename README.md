@@ -1,108 +1,115 @@
-🛡️ Antígeno Digital: Detector de Prompt Injection para LLMs
-Antígeno Digital é um sistema de segurança baseado em Inteligência Artificial, projetado para atuar como uma camada de proteção para Modelos de Linguagem de Grande Escala (LLMs). O seu objetivo principal é detetar e neutralizar, em tempo real, tentativas maliciosas de injeção de prompt (prompt injection) e de engenharia social, garantindo a integridade e o uso seguro dos LLMs.
+# 🛡️ Antígeno Digital: Detector de Prompt Injection para LLMs
 
-O projeto foi desenvolvido com um foco especial nas nuances da língua portuguesa, culminando num modelo de IA fine-tunado com uma performance de mais de 98% de Recall na deteção de ameaças.
+**Antígeno Digital** é um sistema de segurança baseado em Inteligência Artificial, projetado para atuar como uma camada de proteção para Modelos de Linguagem de Grande Escala (LLMs). Seu objetivo é detectar e neutralizar, em tempo real, tentativas maliciosas de _prompt injection_ e ataques de engenharia social, garantindo o uso seguro e ético dos LLMs.
 
-✨ Funcionalidades Principais
-Deteção de Alta Performance: Utiliza um modelo BERT (BERTimbau) fine-tunado, alcançando mais de 98% de sensibilidade (Recall) na identificação de prompts maliciosos.
+O projeto foi desenvolvido com foco especial na língua portuguesa, resultando em um modelo fine-tunado com desempenho superior a **98% de _Recall_** na detecção de ameaças.
 
-Especialista em Português: Treinado com um dataset customizado de mais de 1.200 exemplos em português, o modelo é capaz de compreender o contexto e as subtilezas do idioma.
+---
 
-Defesa Dupla: Deteta tanto injeções técnicas (comandos para manipular o comportamento do LLM) quanto engenharia social (pedidos de conteúdo prejudicial disfarçados).
+## ✨ Funcionalidades Principais
 
-Arquitetura "AI-First": Após um processo iterativo, o sistema evoluiu para confiar 100% no modelo de IA, abandonando regras manuais para uma maior precisão e menos falsos positivos.
+- **🎯 Detecção de Alta Performance**  
+  Utiliza um modelo BERTimbau fine-tunado, com _Recall_ superior a 98% na identificação de prompts maliciosos.
 
-Integração com Discord: Inclui uma implementação funcional de um bot para o Discord que utiliza o Antígeno Digital como um filtro de segurança antes de consultar um LLM principal (Groq).
+- **🗣️ Especialista em Português**  
+  Treinado com mais de 1.200 exemplos em português, o modelo compreende o contexto e nuances do idioma.
 
-🚀 A Jornada do Projeto
-O desenvolvimento do Antígeno Digital seguiu uma metodologia iterativa em quatro fases:
+- **🛡️ Defesa Dupla**  
+  Detecta tanto injeções técnicas (comandos manipulativos) quanto engenharia social (pedidos disfarçados de conteúdo nocivo).
 
-Fase 1 - Análise de Viabilidade: Testes iniciais com modelos genéricos (ex: Llama-Guard-2) revelaram uma performance insatisfatória para o português (Recall < 35%), demonstrando a necessidade de uma solução customizada.
+- **🧠 Arquitetura "AI-First"**  
+  Após testes, o sistema abandonou regras manuais e passou a confiar 100% no modelo de IA, reduzindo falsos positivos e aumentando a precisão.
 
-Fase 2 - Sistema Híbrido: Uma abordagem inicial combinou um sistema de regras manuais com a IA genérica. Embora tenha melhorado a deteção de ataques óbvios, mostrou-se frágil a ataques mais subtis.
+- **🤖 Integração com Discord**  
+  Implementa um bot funcional no Discord, que filtra mensagens maliciosas antes de consultar um LLM principal (via Groq).
 
-Fase 3 - O Ponto de Virada (Fine-Tuning): O grande salto de qualidade veio com o fine-tuning de um modelo BERTimbau com o nosso dataset customizado, que elevou o Recall para mais de 98%, validando a abordagem.
+---
 
-Fase 4 - Refinamento e "AI-First": Após identificar que o modelo de IA superava a eficácia das regras manuais (principalmente na redução de falsos positivos), o sistema foi refatorado para uma arquitetura "AI-First", confiando plenamente no modelo treinado.
+## 🚀 Jornada do Projeto
 
-🛠️ Tecnologias Utilizadas
-Linguagem: Python 3.9+
+**Fase 1 — Análise de Viabilidade**  
+Testes com modelos genéricos (ex: Llama-Guard-2) apresentaram _Recall_ < 35% em português, indicando a necessidade de uma solução dedicada.
 
-Machine Learning:
+**Fase 2 — Sistema Híbrido**  
+Combinação de IA genérica com regras manuais. Embora eficaz contra ataques óbvios, mostrou-se frágil contra tentativas mais sutis.
 
-PyTorch
+**Fase 3 — O Ponto de Virada (Fine-Tuning)**  
+Fine-tuning do BERTimbau com dataset customizado elevou o _Recall_ para mais de 98%, validando a abordagem especializada.
 
-Hugging Face Transformers (para o modelo, tokenizer e o Trainer)
+**Fase 4 — Arquitetura AI-First**  
+Com o modelo superando as regras manuais, o sistema foi refatorado para confiar exclusivamente na IA treinada.
 
-Hugging Face Datasets (para o processamento de dados)
+---
 
-Scikit-learn (para métricas e divisão do dataset)
+## 🛠️ Tecnologias Utilizadas
 
-Pandas (para manipulação de CSV)
+**Linguagem:** Python 3.9+
 
-Integração:
+**Machine Learning:**
 
-discord.py (para o bot do Discord)
+- PyTorch
+- Hugging Face Transformers
+- Hugging Face Datasets
+- Scikit-learn
+- Pandas
 
-groq (como cliente do LLM principal)
+**Integração:**
 
-Controlo de Versão:
+- `discord.py` (bot Discord)
+- `groq` (cliente do LLM principal)
 
-Git & GitHub
+**Controle de Versão:**
 
-Git LFS (para o armazenamento dos ficheiros do modelo)
+- Git & GitHub
+- Git LFS (para os arquivos de modelo)
 
-📂 Estrutura do Repositório
-O projeto está organizado em duas pastas principais:
+---
 
+## 📂 Estrutura do Repositório
+
+```
 .
-├── 📁 ANTIGENO_DIGITAL/      # Núcleo de IA e scripts de treino
-│   ├── modelo_detector_injecao_v2/  # O modelo fine-tunado (requer Git LFS)
-│   ├── FineTuningModelo.py   # Script para treinar o modelo
-│   └── ...                   # Datasets e scripts de análise
-│
-└── 📁 integração/           # Aplicação prática e integração com o Discord
-    ├── discord_bot.py      # O código principal do bot
-    ├── antigeno_digital.py # Orquestra a análise de segurança
-    ├── classifier/         # Módulo para carregar e usar o modelo
-    └── ...                 # Ficheiros de configuração
+├── ANTIGENO_DIGITAL/
+│   ├── modelo_detector_injecao_v2/     # Modelo fine-tunado (via Git LFS)
+│   ├── FineTuningModelo.py             # Script de treinamento
+│   └── ...                             # Datasets e análises
+└── integração/
+    ├── discord_bot.py                  # Bot principal do Discord
+    ├── antigeno_digital.py             # Módulo de análise de segurança
+    └── classifier/                     # Carregamento e inferência do modelo
+```
 
-⚙️ Instalação e Execução
-Para executar o bot do Discord localmente, siga estes passos:
+---
 
-1. Clone o Repositório
+## ⚙️ Instalação e Execução
 
-Como o projeto usa Git LFS para os ficheiros do modelo, é crucial que você tenha o Git LFS instalado.
+### 1. Clone o Repositório
 
-# Primeiro, instale o Git LFS (se ainda não o tiver)
-# https://git-lfs.github.com
+> Este projeto utiliza Git LFS para armazenar o modelo. Certifique-se de tê-lo instalado.
 
-# Clone o repositório
+```bash
+git lfs install
 git clone https://github.com/andreguiot/antigeno-digital-detector.git
-
-# Navegue para a pasta do projeto
 cd antigeno-digital-detector
-
-# Puxe os ficheiros grandes do LFS
 git lfs pull
+```
 
-2. Crie um Ambiente Virtual
+### 2. Crie um Ambiente Virtual
 
-É uma boa prática isolar as dependências do projeto.
-
-# Crie o ambiente
+```bash
 python -m venv venv
+```
 
-# Ative o ambiente
-# No Windows:
-venv\Scripts\activate
-# No macOS/Linux:
-source venv/bin/activate
+Ative o ambiente:
 
-3. Instale as Dependências
+- **Windows:** `venv\Scripts\activate`
+- **Linux/macOS:** `source venv/bin/activate`
 
-Crie um ficheiro requirements.txt na raiz do projeto com o seguinte conteúdo:
+### 3. Instale as Dependências
 
+Crie um arquivo `requirements.txt` com:
+
+```
 torch
 transformers
 datasets
@@ -111,42 +118,53 @@ pandas
 discord.py
 python-dotenv
 groq
+```
 
-E depois instale-o:
+Instale com:
 
+```bash
 pip install -r requirements.txt
+```
 
-4. Configure as Chaves de API
+### 4. Configure as Chaves de API
 
-Na pasta integração, crie um ficheiro chamado .env.
+Crie um arquivo `.env` dentro da pasta `integração/`:
 
-Dentro dele, adicione as suas chaves:
+```env
+DISCORD_BOT_TOKEN="SEU_TOKEN_DISCORD"
+GROQ_API_KEY="SUA_CHAVE_GROQ"
+```
 
-DISCORD_BOT_TOKEN="O_SEU_TOKEN_AQUI"
-GROQ_API_KEY="A_SUA_CHAVE_GROQ_AQUI"
+O script `config.py` já está pronto para ler essas variáveis.
 
-O ficheiro config.py já está preparado para ler estas variáveis.
+### 5. Execute o Bot
 
-5. Execute o Bot
-
+```bash
 python integração/discord_bot.py
+```
 
-O bot ficará online no seu servidor do Discord e responderá a comandos iniciados com !antigeno.
+O bot entrará online no seu servidor e responderá a comandos iniciados com `!antigeno`.
 
-🔮 Próximos Passos e Melhorias
-O modelo atual, embora robusto, ainda tem espaço para melhorias:
+---
 
-Melhorar a Deteção de Eufemismos: Treinar o modelo com mais exemplos de linguagem codificada (ex: "saco de carne de 70kg").
+## 🔮 Próximos Passos
 
-Fortalecer a Deteção de Conteúdo Ilegal: Aumentar o número de exemplos de pedidos diretos de conteúdo prejudicial para aumentar a sensibilidade do modelo a estes casos.
+- **🧩 Melhor detecção de eufemismos**  
+  Expandir o dataset com linguagem codificada (ex: “saco de carne de 70kg”).
 
-Reduzir a Hipersensibilidade: Adicionar mais exemplos de uso seguro de palavras-chave como "prompt" para diminuir os Falsos Positivos restantes.
+- **🚫 Detecção de conteúdo ilegal**  
+  Adicionar mais exemplos de solicitações prejudiciais explícitas.
 
-👨‍💻 Autores 
-  Equipe IEEE : 
+- **🎯 Redução de falsos positivos**  
+  Incluir exemplos seguros com palavras sensíveis como “prompt”.
 
-André Guiot  - andreguiot
+---
 
+## 👨‍💻 Autoria
 
+**Desenvolvido por:**  
+Equipe IEEE
 
-Sinta-se à vontade para explorar o código!
+- André Guiot – [@andreguiot](https://github.com/andreguiot)
+
+Sinta-se à vontade para explorar, contribuir ou abrir _issues_! 🧪
