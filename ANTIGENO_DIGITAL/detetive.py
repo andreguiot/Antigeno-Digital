@@ -1,14 +1,14 @@
 # detetive.py (Ajustado para também salvar Falsos Negativos)
 import csv
 import utils_antigeno as utils # Seu arquivo com as funções auxiliares
-from transformers import pipeline
+from transformers.pipelines import pipeline
 
 def main():
     """Função principal para executar o detetive de prompts e salvar os resultados."""
     print("Olá! Iniciando nosso Detetive de Prompt Injections (com Regras + IA)...")
 
     # Configurações
-    nome_do_modelo_ia = "modelo_detector_injecao_v2" #neuralmind/bert-base-portuguese-cased
+    nome_do_modelo_ia = "modelo_detector_injecao_v3" #neuralmind/bert-base-portuguese-cased
     nome_arquivo_csv_padrao = "prompts_para_testar.csv" # CSV de entrada
     nome_coluna_prompt_csv = "prompt_text"
     nome_coluna_esperada_csv = "classificacao_esperada" # Coluna que você adicionará ao seu CSV de entrada

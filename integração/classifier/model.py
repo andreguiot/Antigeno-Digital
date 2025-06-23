@@ -1,9 +1,9 @@
 # classifier/model.py
-from transformers import pipeline, AutoConfig
+from transformers.pipelines import pipeline, AutoConfig
 import os
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_NAME = "modelo_detector_injecao_v2"
+MODEL_NAME = "modelo_detector_injecao_v3"
 _potential_model_path = os.path.join(SCRIPT_DIR, MODEL_NAME)
 MODEL_PATH = os.path.abspath(_potential_model_path)
 
